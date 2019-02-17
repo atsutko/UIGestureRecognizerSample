@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPressView(sender:)))  //Swift3
         
         longPressGesture.minimumPressDuration = 3  //3秒間以上押された場合にロングプレスとする
-        longPressGesture.numberOfTapsRequired = 5
+        longPressGesture.numberOfTouchesRequired = 5 // 5本指で押した時のみ
         longPressGesture.allowableMovement = 30  //ロングプレスを判定する指が動いていい範囲、単位はpx
         
         self.view.addGestureRecognizer(longPressGesture)
